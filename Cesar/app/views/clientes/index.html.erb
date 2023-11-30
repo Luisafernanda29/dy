@@ -1,0 +1,25 @@
+<p style="color: green"><%= notice %></p>
+
+<h1>Lista de Clientes</h1>
+<div class="row">
+  <div class="col-sm-6">
+    <table class="table">
+      <div id="clientes">
+        <% @clientes.each do |cliente| %>
+          <thead>
+            <tr>
+              <th scope="col">#</th>
+              <th scope="col">Nombre</th>
+              <th scope="col">Perfil</th>
+            </tr>
+          </thead>
+          <tbody>
+            <%= render cliente %>
+          </tbody>
+        <% end %>
+      </div>
+    </table>
+  </div>
+</div>
+
+<%= link_to "Nuevo cliente", new_cliente_path %>

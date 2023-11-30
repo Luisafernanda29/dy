@@ -1,0 +1,27 @@
+<p style="color: green"><%= notice %></p>
+
+<h1>Pedidos</h1>
+
+<div class="row">
+  <div class="col-sm-6">
+    <table class="table">
+      <div id="pedidos">
+        <% @pedidos.each do |pedido| %>
+          <thead>
+            <tr>
+              <th scope="col">#</th>
+              <th scope="col">Nombre</th>
+              <th scope="col">Cliente</th>
+              <th scope="col">Detalles</th>
+            </tr>
+          </thead>
+          <tbody>
+            <%= render pedido %>
+          </tbody>
+        <% end %>
+      </div>
+    </table>
+  </div>
+</div>
+
+<%= link_to "New pedido", new_pedido_path %>
